@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Portfolio</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/home.css">
+  <style>
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.5s ease-in forwards;
+    }
+
+    .show {
+      opacity: 1 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg"></div>
+  <div class="home">
+    <div id="main">
+      <main>
+        <section class="banner">
+          <header>
+            <nav>
+              <ul>
+                <li class="active"><a href="#home"><span>Home</span></a></li>
+                <li><a href="#about"><span>About</span></a></li>
+                <li><a href="#members"><span>Team</span></a></li>
+                <li><a href="#gallery"><span>Moments</span></a></li>
+                <li><a href="#vision"><span>Vision</span></a></li>
+              </ul>
+            </nav>
+          </header>
+          <div class="overlay">
+            <div>
+              <span>Welcome to our Portfolio</span>
+              <div>
+                <h1>Together, We Grow</h1>
+                <p>Built on teamwork and friendship</p>
+              </div>
+            </div>
+
+            <p class="scroll-indicator">
+              <span>Scroll Down</span>
+              <img src="./assets/img/chevron-down.svg" height="18" />
+            </p>
+          </div>
+        </section>
+        <section id="about">
+          <div>
+            <img src="./assets/img/journey.png" height="130" />
+            <h2>Our Journey</h2>
+            <p>Our story is built on teamwork, shared dreams, and lasting friendships. As BSOA students, we
+              discovered the true value of working together, supporting one another, and growing side by side. This
+              journey has shaped who we are today and continues to inspire us every step of the way.</p>
+          </div>
+        </section>
+        <section id="members">
+          <div>
+            <div>
+              <h2>Meet Our Team</h2>
+              <p>We are a group of passionate and determined students, each bringing our own strengths, dreams, and
+                personalities.</p>
+            </div>
+            <div id="team-container" style="display: block;width: 100%;">
+              <div class="list">
+                <div id="team-list"></div>
+              </div>
+              <nav>
+                <ul id="team-link"></ul>
+              </nav>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery">
+          <div>
+            <h2>Our Moments</h2>
+            <p>Take a look at some moments and memories we've made together as a team.</p>
+            <div>
+              <div id="gallery-list"></div>
+            </div>
+          </div>
+        </section>
+        <section id="vision">
+          <div>
+            <h2>Our Vision</h2>
+            <p>We aim to become the best versions of ourselves — strong, passionate, and driven individuals. We want to
+              grow, learn, and achieve our dreams while inspiring others to do the same.
+
+              As a group, we believe in hard work, positivity, and supporting each other. We see a future where we reach
+              our goals and make a difference in our own ways.
+            </p>
+          </div>
+        </section>
+        <footer>
+          <span>Made with Love (❤️)</span>
+        </footer>
+      </main>
+    </div>
+  </div>
+  <a class="sr-only" href="https://github.com/lazuee">Lazuee</a>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const show = (className) => {
+        document.getElementById('main').classList.add(className);
+      }
+      if (sessionStorage.getItem('visit')) show("show");
+      else setTimeout(() => show("fade-in"), 1000);
+
+      // uncomment this to prevent splash on index
+      // sessionStorage.setItem('visit', 'true');
+    });
+  </script>
+  <script>
+    const data = [
+      {
+        name: "Dayline Tribunalo Salmile",
+        age: 24,
+        sex: "Female",
+        address: "Glan, Sarangani Province",
+        email: "salmiledayline9@gmail.com",
+        motto: "Never expect, never assume",
+        passion: "I want to travel all over the world",
+        hobbies: "Cooking & eating, singing, dancing",
+        photo: "salmile.jpg"
+      },
+      {
+        name: "Gwen H. Lucero",
+        age: 20,
+        sex: "Female",
+        address: "Changco Phase 1-B, Barangay Bawing, General Santos City",
+        email: "gwenlucero159@gmail.com",
+        motto: "Every failure is a step to success",
+        passion: "Helping others, becoming a successful person and businesswoman",
+        hobbies: "Sleeping, adventures, watching videos on social media, gossiping with friends, singing",
+        photo: "lucero.jpg"
+      },
+      {
+        name: "Rea A. Jusay",
+        age: 24,
+        sex: "Female",
+        address: "Malungon, Sarangani Province",
+        email: "reajusay26@gmail.com",
+        motto: "Start your day with positive thinking",
+        passion: "An open mindset",
+        hobbies: "Traveling, cooking, etc.",
+        photo: "jusay.jpg"
+      },
+      {
+        name: "Renz Conrad Pabunita",
+        age: 21,
+        sex: "Male",
+        address: "Purok Perales, Barangay Sinawal, General Santos City",
+        email: "renzconradpabunita@gmail.com",
+        motto: "Sometimes you win, sometimes you learn",
+        passion: "Achieving my goals, traveling to favorite places, hanging out with friends",
+        hobbies: "Cooking, hiking, basketball, billiards",
+        photo: "renz.jpg"
+      },
+      {
+        name: "Rheyann Remonde",
+        age: 22,
+        sex: "Male",
+        address: "Purok Perales, Barangay Sinawal, General Santos City",
+        email: "rheyannremonde@gmail.com",
+        motto: "It is never too late to be what you might have been",
+        passion: "Building strong romantic, family, and friendship bonds",
+        hobbies: "Motorsports and billiards",
+        photo: "rheyan.jpg"
+      }
+    ];
+
+    const memberList = document.getElementById('team-list');
+    const memberLink = document.getElementById('team-link');
+    for (let i = 0; i < data.length; i++) {
+      const member = data[i];
+      const profile = document.createElement('a');
+      profile.id = `team${i}`;
+      profile.innerHTML = `
+          <div>
+          <div>
+          <div class="profile" style="background-image: url('${member.photo ? "./assets/img/users/" + member.photo : "./assets/img/no-image.svg"}');"></div>
+          </div>
+          <div><h2>${member.name}</h2>
+      <div>
+      <p><strong>Age</strong> <span>${member.age}</span></p>
+      <p><strong>Email</strong> <span>${member.email}</span></p>
+      <p><strong>Address</strong> <span>${member.address}</span></p>
+      <p><strong>Motto</strong> <span>${member.motto}</span></p>
+      <p><strong>Passion</strong> <span>${member.passion}</span></p>
+      </div>
+          </div>
+          </div>
+        `;
+      memberList.appendChild(profile);
+
+      const li = document.createElement('li');
+      if (i === 1) li.classList.add('active');
+      li.innerHTML = `<a href="#team${i}"><span>${member.name.split(' ')[0]}</span></a>`;
+      memberLink.appendChild(li);
+    }
+    const links = document.querySelectorAll('#team-link li');
+    links.forEach((li, index) => {
+      li.querySelector('a').addEventListener('click', () => {
+        links.forEach(link => link.classList.remove('active'));
+        li.classList.add('active');
+
+        const target = document.getElementById(`team${index + 1}`);
+        if (target) {
+          memberList.scrollTo({
+            left: 0,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+  </script>
+  <script>
+    const imgs = ["3f540adf-1450-4242-9104-f1732d1d50e2.jpg", "87a9c3d5-a762-4a09-88ab-2309e6a5cc91.jpg", "509a88a0-1322-4b06-9e4d-3f98b0cb5813.jpg",
+      "6178d909-fb7d-43ef-ac4c-9a58fb2c1fe3.jpg", "803580a5-2435-4b4c-b5db-8de9988c0da0.jpg", "e332d49e-2eba-456f-ae0f-18f1e1b15c28.jpg",
+      "e02816a9-a50c-4745-83f9-caf7373fe87c.jpg", "eb4c69e8-b062-4747-9df4-f886f759e977.jpg"
+    ].map((href) => `./assets/img/gallery/${href}`);
+    const gallery = document.getElementById('gallery-list');
+    imgs.forEach(href => {
+      if (href.endsWith('.png') || href.endsWith('.jpg')) {
+        const img = document.createElement('img');
+        img.src = href;
+        img.alt = 'Gallery Image';
+        gallery.appendChild(img);
+      }
+    });
+  </script>
+</body>
+
+</html>
