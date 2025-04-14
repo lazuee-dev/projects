@@ -210,7 +210,7 @@
       memberList.appendChild(profile);
 
       const li = document.createElement('li');
-      if (i === 1) li.classList.add('active');
+      if (i === 0) li.classList.add('active');
       li.innerHTML = `<a href="#team${i}"><span>${member.name.split(' ')[0]}</span></a>`;
       memberLink.appendChild(li);
     }
